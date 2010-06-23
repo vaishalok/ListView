@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="fill_parent"
+     android:layout_height="70dip"
+     >
+     
+     <RelativeLayout
+     	android:id="@+id/list_view_with_button_one_item_view_text_relative_layout"
+     	android:layout_width="200dip"
+     	android:layout_height="wrap_content"
+     	>
+     <!-- android:background="@drawable/relative_layout_bg"  -->
+	     <TextView 
+	     	android:id="@+id/list_view_with_button_one_item_view_first_text_view"
+	     	android:layout_width="200dip"
+	        android:layout_height="wrap_content"
+	   	  	android:layout_marginLeft="15dip"
+	   	  	android:layout_alignParentTop="true"
+	       	android:layout_alignParentLeft="true"
+	    	android:textColor="@color/black"
+	        android:textStyle="bold"
+	        android:textSize="17dip"
+	     	android:maxLines="1"
+	     	android:ellipsize="end"
+	     	>
+	     </TextView>
+	     
+	     
+	     <TextView 
+	     	android:id="@+id/list_view_with_button_one_item_view_second_text_view"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" 
+	        android:layout_below="@id/list_view_with_button_one_item_view_first_text_view"
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginLeft="15dip"
+	        android:textColor="@color/black"
+	        android:maxLines="1"
+	        android:textSize="15dip"
+	        >
+	     </TextView>
+	     
+	     <TextView 
+	     	android:id="@+id/list_view_with_button_one_item_view_third_text_view"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" 
+	        android:layout_below="@id/list_view_with_button_one_item_view_first_text_view"
+	        android:layout_toRightOf="@id/list_view_with_button_one_item_view_second_text_view"
+	        android:layout_marginLeft="15dip"
+	        android:textColor="@color/black"
+	        android:maxLines="1"
+	        android:textSize="15dip"
+	        >
+	     </TextView>
+	 
+	     <TextView 
+	     	android:id="@+id/list_view_with_button_one_item_view_third_text_view"
+	     	android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"  
+	        android:layout_below="@id/list_view_with_button_one_item_view_first_text_view"
+	        android:layout_toRightOf="@id/list_view_with_button_one_item_view_second_text_view"
+	        android:layout_marginRight="20dip"
+	        android:textColor="@color/black"
+	        android:maxLines="1"
+	        android:textSize="15dip"
+	        >
+	     </TextView>
+     </RelativeLayout>
+     
+<!--      <Button 
+  		android:id="@+id/list_view_with_button_one_item_view_first_button"
+     	android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+   	  	android:layout_marginLeft="25dip"
+   	  	android:layout_marginRight="25dip"
+   	  	android:layout_marginTop="5dip"
+   	  	android:layout_marginBottom="5dip"
+   	  	android:layout_alignParentTop="true"
+       	android:layout_alignParentRight="true"
+       	android:text="Delete"
+       	android:focusable="false"
+       	android:focusableInTouchMode="false"
+       	android:textColor="@color/black"
+        android:textSize="15dip"
+     	android:maxLines="1"
+     	android:ellipsize="end"
+     	>
+     </Button>
+	 
+ -->        
+</RelativeLayout>
