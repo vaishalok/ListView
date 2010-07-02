@@ -8,13 +8,13 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
 
 public class ListViewWithButton extends ListActivity implements OnItemSelectedListener {
@@ -50,22 +50,6 @@ public class ListViewWithButton extends ListActivity implements OnItemSelectedLi
 	    
 	    lv.setOnItemSelectedListener(this);
 	    
-	    lv.setOnItemClickListener(new OnItemClickListener(){
-
-			@Override
-			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				view.setBackgroundDrawable(context.getResources().getDrawable(R.drawable.green));
-				
-			}
-	    	
-	    });
-	    
-	    ArrayList<String> myList = new ArrayList<String>();
-	    myList.add("Alok");
-	    myList.add("Prashant");
-	    myList.add("Jiger");
-	    myList.add("Mohit");
-	    
 	    ArrayList<HashMap<String, String>> dataArrayList = new ArrayList<HashMap<String, String>>();
 	  
 	    for(int i=0; i< 20; i++) {
@@ -97,6 +81,14 @@ public class ListViewWithButton extends ListActivity implements OnItemSelectedLi
 	    	LayoutParams lp = new LayoutParams(LayoutParams.FILL_PARENT, 45);
 	    	button.setLayoutParams(lp);
 	    	button.setText("Delete");
+	    	button.setTag(i);
+	    	
+	    	button.setOnClickListener(new OnClickListener() {
+				@Override
+				public void onClick(View clickedButton) {
+					Toast.makeText(context, "Delete button is Clicked " + clickedButton.getTag(), Toast.LENGTH_LONG).show();
+				}
+	    	});
 	    	
 	    	buttonArray.add(button);
 	    	buttonLinearLayout.addView(button);

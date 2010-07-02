@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,13 +38,6 @@ class MyAdapter extends SimpleAdapter implements OnClickListener {
 	            if (null == convertView) {
 	            	convertView = mInflater.inflate(R.layout.list_view_with_button_one_item_view, null);
 	            }
-	            //take the Button and set listener. It will be invoked when you click the button.
-	         //   Button btn = (Button) convertView.findViewById(R.id.list_view_with_button_one_item_view_first_button);
-	         //   btn.setTag(position);
-	         //   btn.setOnClickListener(this);
-	            
-	           // RelativeLayout rlText = (RelativeLayout)convertView.findViewById(R.id.list_view_with_button_one_item_view_text_relative_layout);
-	           // rlText.setOnClickListener(this);
 	            
 	            HashMap<String, String> hm = (HashMap<String, String>) listData.get(position);
 	            
